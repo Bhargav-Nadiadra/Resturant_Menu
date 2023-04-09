@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+
 
 const MenuCard = ({ menuData }) => {
     // console.log(menuData);
@@ -9,20 +9,16 @@ const MenuCard = ({ menuData }) => {
         {menuData.map((curElem) => {
           return (
             <>
-              <div className="card-container">
+              <div className="card-container" key={curElem.id}>
                 <div className="card">
                   <div className="card-body">
-                    <span className="card-number card-circle subtle">1</span>
-                    <span className="card-author">Breakfast</span>
-                    <h2 className="card-title">Maggi</h2>
-                    <span className="card-description subtle">
-                      Here comes the description Here comes the descriptionHere
-                      comes the descriptionHere comes the descriptionHere comes
-                      the description
-                    </span>
+                              <span className="card-number card-circle subtle">{ curElem.id}</span>
+                    <span className="card-author">{curElem.name}</span>
+                              <h2 className="card-title">{ curElem.name}</h2>
+                              <span className="card-description subtle">{ curElem.description}</span>
                     <div className="card-read">Read</div>
                   </div>
-                  {/* <img src={image} alt="images" className='card-media' /> */}
+                  <img src={curElem.image} alt="images" className='card-media' />
                   <span className="card-tag subtle"> Order Now</span>
                 </div>
               </div>
