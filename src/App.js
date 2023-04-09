@@ -1,11 +1,12 @@
+import React from 'react'
+import Resturant from './component/Basics/Resturant'
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
- 
-    </div>
-  );
+    <>
+      <Resturant/>
+    </>
+  )
 }
 
-export default App;
+export default App
